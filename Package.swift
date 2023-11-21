@@ -23,9 +23,13 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-syntax", from: "509.0.0"),
         .package(url: "https://github.com/SwiftUIX/SwiftUIX.git", branch: "master"),
         .package(url: "https://github.com/SwiftUIX/SwiftUIZ.git", branch: "main"),
+        .package(url: "https://github.com/vmanot/Cataphyl.git", branch: "main"),
         .package(url: "https://github.com/vmanot/CorePersistence.git", branch: "main"),
         .package(url: "https://github.com/vmanot/Expansions.git", branch: "main"),
+        .package(url: "https://github.com/vmanot/Media.git", branch: "main"),
         .package(url: "https://github.com/vmanot/Merge.git", branch: "master"),
+        .package(url: "https://github.com/vmanot/NetworkKit.git", branch: "master"),
+        .package(url: "https://github.com/vmanot/OpenAI.git", branch: "main"),
         .package(url: "https://github.com/vmanot/Swallow.git", branch: "master"),
     ],
     targets: [
@@ -46,9 +50,13 @@ let package = Package(
         .target(
             name: "Lite",
             dependencies: [
+                "Cataphyl",
                 "CorePersistence",
                 "Expansions",
+                "Media",
                 "Merge",
+                "NetworkKit",
+                "OpenAI",
                 "Swallow",
                 "SwiftUIX",
                 "SwiftUIZ",
