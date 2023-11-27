@@ -155,8 +155,8 @@ struct _AccountSelectionPicker: View {
                 }
                 .scrollContentBackground(.hidden)
                 .navigationTitle("Accounts")
-                .navigationSubtitle("Add an account provider.")
-                .toolbarBackground(.hidden, for: .windowToolbar)
+                //.navigationSubtitle("Add an account provider.")
+                //.toolbarBackground(.hidden, for: .windowToolbar)
         }
         .frame(width: 448, height: 560)
         .background(Color.accountModalBackgroundColor.ignoresSafeArea())
