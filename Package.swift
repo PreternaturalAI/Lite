@@ -22,6 +22,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-syntax", from: "509.0.0"),
         .package(url: "https://github.com/PreternaturalAI/Cataphyl.git", branch: "main"),
+        .package(url: "https://github.com/PreternaturalAI/ChatKit.git", branch: "main"),
         .package(url: "https://github.com/SwiftUIX/SwiftUIX.git", branch: "master"),
         .package(url: "https://github.com/SwiftUIX/SwiftUIZ.git", branch: "main"),
         .package(url: "https://github.com/vmanot/CorePersistence.git", branch: "main"),
@@ -51,6 +52,7 @@ let package = Package(
             name: "Lite",
             dependencies: [
                 "Cataphyl",
+                "ChatKit",
                 "CorePersistence",
                 "Expansions",
                 "Media",
@@ -61,7 +63,8 @@ let package = Package(
                 "SwiftUIX",
                 "SwiftUIZ",
             ],
-            path: "Sources/Lite"
+            path: "Sources/Lite",
+            resources: [.process("Resources")]
         )
     ]
 )
