@@ -20,9 +20,11 @@ let package = Package(
         )
     ],
     dependencies: [
+        .package(url: "https://github.com/vmanot/Pow.git", branch: "main"),
         .package(url: "https://github.com/apple/swift-syntax", from: "509.0.0"),
         .package(url: "https://github.com/PreternaturalAI/Cataphyl.git", branch: "main"),
         .package(url: "https://github.com/PreternaturalAI/ChatKit.git", branch: "main"),
+        .package(url: "https://github.com/PreternaturalAI/CoreGML.git", branch: "main"),
         .package(url: "https://github.com/PreternaturalAI/ElevenLabs.git", branch: "main"),
         .package(url: "https://github.com/SwiftUIX/SwiftUIX.git", branch: "master"),
         .package(url: "https://github.com/SwiftUIX/SwiftUIZ.git", branch: "main"),
@@ -38,7 +40,6 @@ let package = Package(
         .macro(
             name: "LiteMacros",
             dependencies: [
-                "Expansions",
                 "Swallow",
                 .product(name: "SwiftSyntax", package: "swift-syntax"),
                 .product(name: "SwiftSyntaxMacros", package: "swift-syntax"),
@@ -54,6 +55,7 @@ let package = Package(
             dependencies: [
                 "Cataphyl",
                 "ChatKit",
+                "CoreGML",
                 "CorePersistence",
                 "ElevenLabs",
                 "Expansions",
@@ -61,6 +63,7 @@ let package = Package(
                 "Merge",
                 "NetworkKit",
                 "OpenAI",
+                "Pow",
                 "Swallow",
                 "SwiftUIX",
                 "SwiftUIZ",

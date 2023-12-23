@@ -9,5 +9,9 @@ import SwiftUIX
 @MainActor
 @Singleton
 public final class LTDataStore: ObservableObject {
-    @PublishedObject var accounts = LTAccountsStore()
+    @PublishedObject private var _accounts = LTAccountsStore()
+    
+    public var accounts: LTAccountsStore {
+        _accounts
+    }
 }
