@@ -42,9 +42,9 @@ public struct LTAccountForm: View {
         }
         .toolbar {
             ToolbarItemGroup(placement: .cancellationAction) {
-                DismissPresentationButton("Cancel") 
+                DismissPresentationButton("Cancel")
             }
-
+            
             ToolbarItemGroup(placement: .confirmationAction) {
                 DismissPresentationButton("Done") {
                     
@@ -60,12 +60,16 @@ public struct LTAccountForm: View {
         
         var body: some View {
             Form {
-                TextField("Enter your API key here", text: $subject.key)
-                    ._focusOnAppear()
+                SecureField(
+                    subject.key.count < 32 ? "Enter your API key here:" : "API Key:",
+                    text: $subject.key
+                )
+                ._focusOnAppear()
             }
             .onSubmit {
                 submit(subject)
             }
+            .animation(.none, value: subject.key)
         }
     }
 }
