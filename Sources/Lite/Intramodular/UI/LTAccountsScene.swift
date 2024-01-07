@@ -7,7 +7,7 @@ import Swallow
 import SwiftUIZ
 
 public struct LTAccountsScene: DynamicView {
-    @StateObject var store: LTAccountsStore = LTDataStore.shared.accounts
+    @StateObject var store: LTAccountStore = LTDataStore.shared.accounts
     
     public init() {
         
@@ -38,7 +38,7 @@ public struct LTAccountsScene: DynamicView {
     }
     
     private struct NewAccountButton: View {
-        @EnvironmentObject var store: LTAccountsStore
+        @EnvironmentObject var store: LTAccountStore
         
         var body: some View {
             PresentationLink {
@@ -65,7 +65,7 @@ public struct LTAccountsScene: DynamicView {
     }
     
     private struct Cell: View {
-        @EnvironmentObject var store: LTAccountsStore
+        @EnvironmentObject var store: LTAccountStore
         
         @Binding var account: LTAccount
         

@@ -4,8 +4,7 @@
 
 import CorePersistence
 import Swallow
-import SwiftUIZ
 
-public protocol LTModel: HadeanIdentifiable, InterfaceModel {
+public final class LTDocumentStore {
     
 }

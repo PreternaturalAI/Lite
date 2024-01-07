@@ -8,7 +8,7 @@ import SwiftUIX
 
 @MainActor
 public final class LMServices: ObservableObject {
-    @PublishedObject var accounts: LTAccountsStore
+    @PublishedObject var accounts: LTAccountStore
     
     public init() {
         self.accounts = LTDataStore.shared.accounts

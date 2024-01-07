@@ -7,7 +7,7 @@ import Runtime
 import SwiftUIX
 
 @MainActor
-public final class LTAccountsStore: ObservableObject {
+public final class LTAccountStore: ObservableObject {
     @FileStorage(
         directory: .documents,
         path: "Lite/Accounts",

@@ -10,7 +10,7 @@ import SwiftUIZ
 public struct LTAccount: Codable, Hashable, InterfaceModel {
     public typealias ID = _TypeAssociatedID<Self, UUID>
     
-    @LogicalParent var store: LTAccountsStore
+    @LogicalParent var store: LTAccountStore
     
     public let id: ID
     public let accountType: LTAccountTypeIdentifier

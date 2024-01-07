@@ -11,7 +11,7 @@ struct LTAccountPicker: View {
     @Environment(\._submit) var submit
     @Environment(\.presentationMode) var presentationMode
 
-    @EnvironmentObject var store: LTAccountsStore
+    @EnvironmentObject var store: LTAccountStore
     
     @State var path = NavigationPath()
     
